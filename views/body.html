@@ -1,0 +1,38 @@
+	<body>
+		<% include header.html %>
+		
+		<h1>Intervelo-Meter</h1>
+		<% var jsonStr = JSON.stringify(responseObj); %>
+		<p> Data : <%= jsonStr %> </p>
+
+		<form class="form-horizontal" action="http://192.168.1.101/process" method="get">
+
+<div class="form-group">
+  <label class="control-label" for="inputLarge">Motor ON time</label>
+  <input class="form-control input-lg" type="text" id="MototOnTime" name="MototOnTime">
+</div>
+
+<div class="form-group">
+  <label class="control-label" for="inputLarge">Motor OFF time</label>
+  <input class="form-control input-lg" type="text" id="MototOffTime" name="MototOffTime">
+</div>
+
+<div class="form-group">
+  <label class="control-label" for="inputLarge">BLOB time for pics</label>
+  <input class="form-control input-lg" type="text" id="BlobTime" name="BlobTime">
+</div>
+
+<div class="form-group">
+  <label class="control-label" for="inputLarge">Number of Pictures</label>
+  <input class="form-control input-lg" type="text" id="NumberOffPics" name="NumberOffPics">
+</div>
+
+<div class="form-group">
+  <label class="control-label" for="inputLarge">Delay between pics</label>
+  <input class="form-control input-lg" type="text" id="Delay" name="Delay">
+</div>
+		
+<button type="submit" class="btn btn-primary">Submit</button>
+
+		</form>
+		<% include footer.html %>
